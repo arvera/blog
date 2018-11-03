@@ -1,0 +1,12 @@
+---
+layout: post
+title: Deleting files in subdirectories and creating empty folders for Windows users
+date: '2017-03-24T09:10:00.000-07:00'
+author: Gunfus
+tags: 
+modified_time: '2017-03-24T09:12:14.942-07:00'
+blogger_id: tag:blogger.com,1999:blog-17927613.post-7146419572833109824
+blogger_orig_url: https://gunfus.blogspot.com/2017/03/deleteing-files-in-subdirectories-and.html
+---
+
+If you have had to create a directory structures to provide a template for other users, you can find some tricks online on how to do that. But all of those post seem to be lacking of "how to create a file in each directory in windows".<br /><br />The other day I found myself with this need as I had to check a directory structure in GIT, and GIT&nbsp; doesn't like you checking in empty folders.<br /><br />So first I copy the directory strucuture that I wanted from somewhere else and then deleted all the files inside using:<br /><br /><span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">Del /R *.*&nbsp;</span><br /><br />Well that easy I had a bunch of empty folders now to create the empty file.<br /><br />Reading up on batch scripting which I have done in the past after several tries I came up with this:<br /><span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;"><br /></span><span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">@echo off<br /><br />setlocal<br /><br />set "location=W:\GitRepo\src\patch\ConsolidatePatch7"<br /><br />for /R %location% %%G in (.) do (<br />Pushd %%G<br />echo. 2&gt;.readme<br />Popd<br />)</span><br /><br />That created a .readme file on each and every directory and subdirectory of location. I was then able to check in this strucutre in GIT without a problem.<br /><br /><br />
