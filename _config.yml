@@ -1,3 +1,16 @@
 name: Angel Vera, e-com-chef
 markdown: kramdown
-theme: jekyll-theme-time-machine
+remote_theme: "mmistakes/minimal-mistakes"
+defaults:
+  
+  - 
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      author: "Angel"
