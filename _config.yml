@@ -126,6 +126,12 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
+
+# Site header
+excerpt: "Below are my ideas, stories, experiences, and notes of my career as a eCommerce Specialist. Keep in mind that as a consultant our experiences varies from Project to project but at the end we bake good cakes!"
+header:
+  overlay_color: "#333"
+
 # Site Footer
 footer:
   links:
