@@ -1,12 +1,7 @@
 ---
-layout: post
+layout: single
 title: Ncat -vvv
 date: '2018-11-01T09:24:00.001-07:00'
-author: Gunfus
-tags: 
-modified_time: '2018-11-01T09:25:43.230-07:00'
-blogger_id: tag:blogger.com,1999:blog-17927613.post-1831606049785347785
-blogger_orig_url: https://gunfus.blogspot.com/2018/11/ncat-vvv.html
 ---
 
 Upon doing some testing for some connectivity, a client college recommended to use ncat with -v, the exact command was ncat -vvv -w2 -i2 &lt;HOST&gt; &lt;PORT&gt;<br /><br />I was trying to understand the results and I did something where<br /><br />| hosto | source environment<br />| hosta | target environment<br /><br /><br />## For a failing not open connection on port 80:<br />angelo@hosto:~$ ncat -vvv -i2 -w2 hosta 80<br />Ncat: Version 6.40 ( http://nmap.org/ncat )<br />libnsock nsi_new2(): nsi_new (IOD #1)<br />libnsock nsock_connect_tcp(): TCP connection requested to 192.168.1.124:80 (IOD #1) EID 8<br />libnsock nsock_trace_handler_callback(): Callback: CONNECT ERROR [Connection refused (111)] for EID 8 [192.168.1.124:80]<br />Ncat: Connection refused.<br /><br /><br />## For a working connection on port 22 (ssh-server running):<br />Ncat: Version 6.40 ( http://nmap.org/ncat )<br />libnsock nsi_new2(): nsi_new (IOD #1)<br />libnsock nsock_connect_tcp(): TCP connection requested to 192.168.1.124:22 (IOD #1) EID 8<br />libnsock nsock_trace_handler_callback(): Callback: CONNECT SUCCESS for EID 8 [192.168.1.124:22]<br />Ncat: Connected to 192.168.1.124:22.<br />libnsock nsi_new2(): nsi_new (IOD #2)<br />libnsock nsock_read(): Read request from IOD #1 [192.168.1.124:22] (timeout: -1ms) EID 18<br />libnsock nsock_readbytes(): Read request for 0 bytes from IOD #2 [peer unspecified] EID 26<br />libnsock nsock_timer_create(): Timer created - 2000ms from now.&nbsp; EID 36<br />libnsock nsock_trace_handler_callback(): Callback: READ SUCCESS for EID 18 [192.168.1.124:22] (41 bytes): SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2..<br />SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2<br />libnsock nsock_readbytes(): Read request for 0 bytes from IOD #1 [192.168.1.124:22] EID 42<br />libnsock nsock_event_cancel(): Event #36 (type TIMER) cancelled<br />libnsock msevent_cancel(): msevent_cancel on event #36 (type TIMER)<br />libnsock nsock_timer_create(): Timer created - 2000ms from now.&nbsp; EID 52<br />libnsock nsock_trace_handler_callback(): Callback: TIMER SUCCESS for EID 52<br />Ncat: Idle timeout expired (2000 ms).<br /><br /><br />

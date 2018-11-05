@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Chef-e-com @ github.pages launch site"
 date: 2018-11-02
 ---
