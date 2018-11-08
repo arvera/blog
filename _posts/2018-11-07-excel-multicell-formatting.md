@@ -4,7 +4,9 @@ title: "Excel multicell formating"
 date: 2018-11-07
 tag: excel
 ---
-I am no expert in excel, so for a few years already I have been trying to find a way to format all cells in Column A based on the text enter in Column B. Call me excel dummy, but every time that I have this requirement I spend hours searchs and I find macros and tools that do it, but no free way, and the documentation doesn't help me.
+I am no expert in excel, so for a few years already I have been trying to find a way to format all cells in Column A based on the text enter in Column B. 
+
+Call me excel dummy, but every time that I have this requirement I spend hours searching and I find macros and tools that do it, but no easy free way to do so, and the documentation doesn't help me.
 
 Fast forward to TODAY.. EUREKA! I found a way.. 
 
@@ -37,9 +39,9 @@ Using `Excel for Mac v16`. The gist of it is,
 
 ![Step 2](/blog/assets/images/posts/2018/2018-11-07_at_10.26.png)
 
-Steps #1 #5 are the key here. Step 1 defines the area to change the formatting to, and Step 5 is the formula for find a text **not** on only Columb B mantain `$B` as constant but rows are variable `2`, in other words always evalute the row where the formula is executed.
+**step #1** & **step #5** are the key here. *Step 1* defines the area to change the formatting to, and *Step 5* is the formula for find a text **not** on only Columb B mantain `$B` as constant but rows are variable `2`, in other words always evalute the row where the formula is executed.
 
-In the video I show you how to go about formatting all of the table, but I used a cheap trick, rules ordering.
+In the video, I show you how to go about formatting all the records in the table but I used a cheap trick, rules ordering.
 - I created two rules: one green, one red
 - I use ordering to make the `working` cells green and the `not working` cells red.
 
