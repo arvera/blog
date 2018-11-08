@@ -27,10 +27,11 @@ You get the idea
 ## The solution
 Using `Excel for Mac v16`. The gist of it is,
 1. Select the range that you want the formating to take effect in our case Column A and Column B (but can you select only Column A)
-2. Click on **Conditional formatting** -> **New rule** ![[images/posts/2018/Screen Shot 2018-11-07 at 10.26.54 PM.png]]
+2. Click on **Conditional formatting** -> **New rule** 
 3. Select Style: Classic
 4. Select Use a formula to determine which cells to format
 5. enter `=search("not",$B2)`
+![Step 2](/images/posts/2018/Screen Shot 2018-11-07 at 10.26.54 PM.png)
 
 Steps #1 #5 are the key here. Step 1 defines the area to change the formatting to, and Step 5 is the formula for find a text **not** on only Columb B mantain `$B` as constant but rows are variable `2`, in other words always evalute the row where the formula is executed.
 
