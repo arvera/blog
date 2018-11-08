@@ -35,7 +35,7 @@ Using `Excel for Mac v16`. The gist of it is,
 4. Select Use a formula to determine which cells to format
 5. enter `=search("not",$B2)`
 
-![Step 2](/images/posts/2018/Screen Shot 2018-11-07 at 10.26.54 PM.png)
+![Step 2](/assets/images/posts/2018/2018-11-07_at_10.26.png)
 
 Steps #1 #5 are the key here. Step 1 defines the area to change the formatting to, and Step 5 is the formula for find a text **not** on only Columb B mantain `$B` as constant but rows are variable `2`, in other words always evalute the row where the formula is executed.
 
