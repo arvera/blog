@@ -43,5 +43,5 @@ In the video I show you how to go about formatting all of the table, but I used 
 - I created two rules: one green, one red
 - I use ordering to make the `working` cells green and the `not working` cells red.
 
-{% include youtubePlayer.html id=M6Z3X55WWw4 %}
+{% include youtubePlayer.html id="M6Z3X55WWw4" %}
 
