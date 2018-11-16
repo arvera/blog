@@ -5,7 +5,7 @@ date: 2018-11-10
 tag: wcs trace servisability 
 ---
 ## WCS v9 Dataextract and other tools tracing
-While doing some debugging in WCS v9 with the (dataextract)[https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.ibm.commerce.data.doc/refs/rml_dataextract_dup.htm] utility I found out that enabled **-Dcom.ibm.commerce.catalog.dataload.level=FINER** per the troubleshooting instruction, I needed more tracing.
+While doing some debugging in WCS v9 with the [dataextract](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.ibm.commerce.data.doc/refs/rml_dataextract_dup.htm) utility I found out that enabled **-Dcom.ibm.commerce.catalog.dataload.level=FINER** per the troubleshooting instruction, I needed more tracing.
 
 I found a hidden trace setting finside of IBM Commerce, for a alldbconnector.xml kind of thing.
 ```
