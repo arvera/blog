@@ -8,6 +8,7 @@ tag: wcs solr search hash encode buildindex
 
 The instructions [for WCS Search build index](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.ibm.commerce.search.doc/tasks/tsdsearchbuildindex.htm) 
 require you to pass the username and password of the search/solr user, lets assume:
+| | |
 | - | - | 
 | user | `spiuser`|
 | password | `spi_plain_text_password`|
