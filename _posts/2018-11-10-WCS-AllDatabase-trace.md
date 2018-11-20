@@ -13,5 +13,11 @@ I found a hidden trace setting finside of IBM Commerce, for a alldbconnector.xml
 /opt/WebSphere/CommerceServer90/xml/config/alldbconnector.xml
 ```
 
-In this config file I found different sections for different dbs: <db2>, <oracle> and so on.. I noticed that a few dbs had a entry for <logoutput> but others didn't. I added <logoutput value="stdout" enabled="yes"/> to the oracle section and voila! more tracing info showed up when running dataextract.
+In this config file I found different sections for different dbs: `<db2>`, `<oracle>` and so on.. I noticed that a few dbs had a entry for `<logoutput>` but others didn't. I added 
+
+```
+<logoutput value="stdout" enabled="yes"/>
+```
+
+ to the oracle section and voila! more tracing info showed up when running dataextract.
 
