@@ -124,6 +124,10 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "jpa-modeler"
+      icon: "fas fa-fw fa-link"
+      url: "https://github.com/IBM/wc-jpa-modeler"
+      
 
 
 # Site header
