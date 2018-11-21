@@ -16,11 +16,13 @@ We all use a `docker` user common to all systems that we mantain, this makes it 
 2. `vi config.json`
 3. copy the content below:
 
+{% raw %}
     ```
     {
-        "psFormat":  "table \{{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.RunningFor}} ago\\t \{{.Status}}"
+        "psFormat":  "table {{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.RunningFor}} ago\\t \{{.Status}}"
     }
     ```
+{% endraw %}
 
 4. save the file
 
