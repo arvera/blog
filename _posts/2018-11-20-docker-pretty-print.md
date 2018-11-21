@@ -18,7 +18,7 @@ We all use a `docker` user common to all systems that we mantain, this makes it 
 
     ```
     {
-        "psFormat":  "table \{\{.ID\}\}\\t\{\{.Names\}\}\\t\{\{.Image\}\}\\t\{\{.RunningFor\}\} ago\\t \{\{.Status\}\}"
+        "psFormat":  "table \{{.ID}}\\t{{.Names}}\\t{{.Image}}\\t{{.RunningFor}} ago\\t \{{.Status}}"
     }
     ```
 
