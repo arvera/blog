@@ -12,7 +12,7 @@ touch $POST_FILENAME
 echo "---
 layout: single
 title: "$1"
-date: 2018-11-10
+date: `date +'%Y-%m-%d'`
 tag: wcs trace servisability 
 ---" > $POST_FILENAME
 
