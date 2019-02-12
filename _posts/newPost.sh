@@ -7,7 +7,7 @@ if [ $# -eq 0 ]
     exit -1
 fi
 
-POST_FILENAME=$(date +'%Y-%m-%d')-$1
+POST_FILENAME=$(date +'%Y-%m-%d')-$1.md
 touch $POST_FILENAME
 echo "---
 layout: single
