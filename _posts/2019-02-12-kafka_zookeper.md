@@ -61,8 +61,21 @@ In order to use kafka inside the container you will need to always unset the JMX
 
 ## Step 1 - Enable caching tracing
 1. Enable extended tracing with the following string: `com.ibm.commerce.dynacache.*=all`
-2. 
+ 
 
-## Step 2 - Check the Kafka setup
+## See all the msgs
+`unset JMX_PORT;kafka-console-consumer.sh --zookeeper zookeeper --topic WCdemoCacheInvalidation --from-beginning`
+```
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+STOREENT_ID+NAME:%:0:%:skipConnectOnceStudent
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+NAME:%:skipConnectOnceStudent
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+STOREENT_ID:%:0
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+STOREENT_ID+NAME:%:0:%:DATABASE_TIMEZONE
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+NAME:%:DATABASE_TIMEZONE
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+STOREENT_ID:%:0
+cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF
+```
+
 
 
