@@ -105,6 +105,8 @@ author:
   bio              : "The Sous chef"
   location         : "Canada"
   email            : "gunfus@gmail.com"
+  facebook         : "gunfus"
+  linkedin         : "mrangelvera"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
