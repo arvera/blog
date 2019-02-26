@@ -10,10 +10,10 @@ In part #1 of this article, I was able to see the messages posted in the zookepe
 
 # Step #1 - View messages in queue
  setup myself to watch the messages in the queue.
-![2_messages](/blog/assets/images/posts/2019/2_messages.png)
+![2_messages](../assets/images/posts/2019/2_messages.png)
 
 # Step #2 - Check the cachemonitor
-![cachemonitor_display_10900](/blog/assets/images/posts/2019/cachemonitor_display_10900.png)
+![cachemonitor_display_10900](../assets/images/posts/2019/cachemonitor_display_10900.png)
 
 # Step #3 - Generate a entry
 Using an SQL Client enter (for this client we are working with oracle):
@@ -27,6 +27,6 @@ Wait for a few minutes until the cache invalidation scheduled process kicks in
 
 # Step #5 - Refresh the cachemonitor app
 By refreshing the cache monitor app you will see the entry for `##locatecoursematerial:storeId:10900` disapear.
-![3_messages](/blog/assets/images/posts/2019/3_messages.png)
+![3_messages](../assets/images/posts/2019/3_messages.png)
 
-![cachemonitor_invalid_10900](/blog/assets/images/posts/2019/cachemonitor_invalid_10900.png)
+![cachemonitor_invalid_10900](../assets/images/posts/2019/cachemonitor_invalid_10900.png)
