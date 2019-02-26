@@ -1,4 +1,5 @@
 #!/bin/bash
+# AUTHOR: gunfus@gmail.com
 
 if [ $# -eq 0 ]
   then
