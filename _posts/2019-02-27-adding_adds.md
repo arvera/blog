@@ -12,7 +12,7 @@ https://www.google.com/adsense/start/) to a jekyll blog I found this post from [
 1. Create the account with [Google AdSense](Google AdSense - Make Money Online through Website Monetization
 https://www.google.com/adsense/start/) 
 2. During the process there will be a *blur* about some script that needs to be added to the head
-   ![ad_sense_head_src](../assets/images/posts/2019/add_sense_head_src.png)
+   ![ad_sense_head_src](../assets/images/posts/2019/ad_sense_head_src.png)
 3. Copy the text from the *blur* in step 2
 4. In your git repo, locate `_includes/head/custom.html` and paste the *blur* as prefered in that file
 5. `git add`
