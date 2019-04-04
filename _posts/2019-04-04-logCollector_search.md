@@ -6,6 +6,7 @@ tag: wcs trace servisability
 ---
 We have been running into some problems into my current project with different environments QA, PreProd, Prod, and as we have multiple people working on the environments at times due to availability. I created a script to standarize the process:
 
+(logcollector.sh)[https://github.com/arvera/utilities/blob/master/wcs/logCollector.sh] [(raw)][https://raw.githubusercontent.com/arvera/utilities/master/wcs/logCollector.sh]
 ```
 #!/bin/bash
 set -e
