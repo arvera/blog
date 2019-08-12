@@ -5,11 +5,13 @@ date: 2019-08-12
 tag: wcs git v9
 ---
 
-# As far as git repos what are some of the views? I can think of two two opposing ideals:
+# As far as git repos what are some of the views? 
+
+I can think of two two opposing ideals:
 - the microservices approach,
 - the one solution approach
  
-When we think about Websphere Commerce Server v9 in the context of DevOps, we have to think of the component that need to be built. With WCS 9 introducing containers, there are seven unique container: transaction (txn), http (web), search, store, customization, util, and db2 (only after 9008 and for development only). Each container has a different resource that needs to be applied to the container (for details about the architecture go to: https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.ibm.commerce.install.doc/refs/riginfrastructure.htm).
+When we think about Websphere Commerce Server v9 in the context of DevOps, we have to think of the component that need to be built. With WCS 9 introducing containers, there are seven unique container: transaction (txn), http (web), search, store, customization, util, and db2 (only after 9008 and for development only). Each container has a different resource that needs to be applied to the container (for details about the architecture visit the infocenter [WebSphere Commerce runtime environment overview](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.ibm.commerce.install.doc/refs/riginfrastructure.htm).
  
 I will not cover the db2 container as I haven't gotten a chance to take out for a spin. As far as the other containers go, each of the containers can be identified and deployed separately, and this where the argument begins, do we deploy them separately or together?
  
@@ -54,4 +56,4 @@ con:
  
 The trend seems to be for smaller repos, and you can always have a submodules https://git-scm.com/book/en/v2/Git-Tools-Submodules.
  
-Which approach will your project take?
+**Which approach will you take for your project?**
