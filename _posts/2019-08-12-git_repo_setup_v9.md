@@ -13,7 +13,7 @@ I can think of two two opposing ideals:
  
 When we think about Websphere Commerce Server v9 in the context of DevOps, we have to think of the component that need to be built. With WCS 9 introducing containers, there are seven unique container: transaction (txn), http (web), search, store, customization, util, and db2 (only after 9008 and for development only). Each container has a different resource that needs to be applied to the container (for details about the architecture visit the infocenter [WebSphere Commerce runtime environment overview](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/com.ibm.commerce.install.doc/refs/riginfrastructure.htm).
  
-I will not cover the db2 container as I haven't gotten a chance to take out for a spin. As far as the other containers go, each of the containers can be identified and deployed separately, and this where the argument begins, do we deploy them separately or together?
+I will not cover the db2 container as I haven't gotten a chance to take out for a spin. As far as the other containers go, each of the containers can be identified and deployed separately, and here is where the argument begins, do we deploy them separately or together?
  
 Some people have the argument that although this are separate containers at times there is dependencies on them (like an API that depends on a search customization) and for that they like to keep the containers with the same tag number, thus the idea of having one GIT repo for all containers suites better in the model; in this model you will have fl-ts-43, and fl-search-43 images always being deployed.
  
