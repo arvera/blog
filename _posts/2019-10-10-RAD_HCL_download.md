@@ -4,9 +4,9 @@ title: How to download RAD for HCL Commerce
 date: 2019-10-10
 tag: HCLCommerce hcl download rad
 ---
-Now that HCL has fully taken over the WebSphere Commerce products the links are also changing to be owned by HCL. During this transition times I want to help our customer to get what they need.
+Now that HCL has fully taken over the WebSphere Commerce products the links are also changing to be owned by HCL. During this transition period I want to help our customers to obtain what they need. This post aims to provide a guide and an example of how to download software from the HCL site.
 
-This post from our support team can go a long way. This is the main page from HCL about setting up access to the various support resources: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0069114
+This post from our support team can go a long way on accessing several website. This is the main page from HCL about setting up access to the various support resources: https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0069114
 
  Here is an example on how to go about finding `RAD v9.6 for Commerce V9`
 
