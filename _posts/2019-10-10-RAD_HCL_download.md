@@ -1,4 +1,4 @@
-g---
+---
 layout: single
 title: How to download RAD for HCL Commerce
 date: 2019-10-10
