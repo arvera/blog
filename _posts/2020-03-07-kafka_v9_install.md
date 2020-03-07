@@ -35,6 +35,7 @@ testclient             1/1     Running   0          3
 ```
 
 ### Services:
+
 The helm charts contained a load-balanced and headless services. The services are only made available within the cluster:
 
 ```
@@ -55,6 +56,7 @@ The service is setup as per the following table:
 | Headless service | append pod | my-kafka-0.my-kafka-headless.kafka.svc.cluster | 
 
 # Commerce configuration
+
 For commerce container to hook up to kafka/zookeeper, all is required is 3 variables. There two main ways to do this:
 - Using Vault
 - Using Environment Variables at the guest OS.
