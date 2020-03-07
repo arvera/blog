@@ -47,6 +47,7 @@ my-kafka-zookeeper-headless   ClusterIP   None             <none
 ```
 
 The service is setup as per the following table:
+
 | Description | Name |  Value |
 | - | - | - |
 | Short format (for pods within namespace) | service.port |  my-kafka:9092 |
