@@ -4,7 +4,6 @@ title: How to install/configure kafka/Zookeper in HCL Commerce v9
 date: 2020-03-07
 tag: wcs install kafka zookeper cache
 ---
-# How to install Kafka/Zookeper for Commerce
 
  In this blog post I will describe the process on how to install Kafka/Zookeeper how to set it setup with commerce. We will focus the Kubernetes setup, but it can also be done in docker using a docker-compose file, but that is outside of the scope of this post.  
 
