@@ -11,7 +11,7 @@ This is part #1 of another article that talks about the need of Kafka as part of
 
 There are several ways to install Kafka inside a kubernetes cluster. My friend  Andres Voldman the architect of performance, got his team to install Kafka using a separate namespace other than the commerce and default namespace, this is not required is just simply what is provided as a sample. Kubernetes namespaces are a logical way to group kubernetes artifacts, the intend of this post is not to cover the pro/cons of using a single namespaces or multiple.
 
-The official instructions that we follow to install Kafka are the out of the box instructions at: https://github.com/helm/charts/tree/master/incubator/kafka
+The official instructions that we follow to install Kafka are the out of the box instructions at: (https://github.com/helm/charts/tree/master/incubator/kafka)[https://github.com/helm/charts/tree/master/incubator/kafka]
 
 ## Install Kafka using Helm
 
