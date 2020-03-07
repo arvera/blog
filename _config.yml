@@ -100,7 +100,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Angel"
+  name             : "Angel Vera"
   avatar           : "/assets/images/bio/bio-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "The Sous chef"
   location         : "Canada"
@@ -129,7 +129,7 @@ author:
     - label: "jpa-modeler"
       icon: "fas fa-fw fa-link"
       url: "https://github.com/IBM/wc-jpa-modeler"
-      
+
 
 
 # Site header
