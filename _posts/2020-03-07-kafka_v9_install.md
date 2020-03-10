@@ -57,7 +57,7 @@ The service is setup as per the following table:
 | Long format (for pods from any namespace) | service.namespace.svc.cluster:port | my-kafka-zookeeper.kafka.svc.cluster.local:2181 |
 | Headless service | append pod | my-kafka-0.my-kafka-headless.kafka.svc.cluster | 
 
-# Commerce configuration
+## Commerce configuration
 
 For commerce container to hook up to kafka/zookeeper, all is required is 3 variables. There two main ways to do this:
 - Using Vault
