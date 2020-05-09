@@ -297,5 +297,6 @@ defaults:
       comments: # true
       toc: true
       #toc_label: "TOC"
+      toc_icon: bookmark
       share: true
       related: true
