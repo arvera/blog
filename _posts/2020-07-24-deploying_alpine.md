@@ -25,9 +25,9 @@ I decided to create a Private Cluster, that is one that Public endpoint access e
 # Getting the charts for alpine
 To deploy alpine in the cluster, I configured my Laptop gcloud tools.
 
-'gcloud container clusters get-credentials av-test --zone=us-east1-c'
+`gcloud container clusters get-credentials av-test --zone=us-east1-c`
 
-'helm repo add stable https://kubernetes-charts.storage.googleapis.com/'
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`
 
 To get the alpine charts from the helm repo testdata located here: https://github.com/helm/helm/tree/master/cmd/helm/testdata/testcharts/alpine, you can opt to do a sparseCheckout, but for me it didn't work it simply downloaded everything as opposed of just the `cmd/helm/testdata/testcharts/alpine/`, the steps should work as per [this post](https://unix.stackexchange.com/questions/233327/is-it-possible-to-clone-only-part-of-a-git-projec) but that is a problem for another time. I leave the steps here to see if they work for you.
 
