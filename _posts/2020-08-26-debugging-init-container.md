@@ -1,20 +1,20 @@
 ---
 layout: single
-title: The supportcontainer and how to debugging init container
+title: The supportcontainer and how to debug init container
 date: 2020-08-26
 tag: wcs trace servisability init container
 ---
-In HCL Commerce there is a little container that is often not seen but is a very important piece of the puzzle the *supportcontainer*.
+In this post I explain the usage of the ***supportcontainer*** in its usage as a K8S ***initContainer***, you can use this example to debug other initContainer in other K8S deployments.
 
 # What is the supportcontainer
 
-The support container is a mini-container that runs scripts related to kubernetes and is required to properly start the HCL Commerce platform.
+The support container is a mini-container that runs scripts related to kubernetes and is required to properly start the HCL Commerce platform. The container is used as a way to ensure the correct startup sequence of the platform. Here are some of the activities that it does:
 
 - Is used as an init container for most container deployments when using the helm charts
 - It does dependency checks between the containers, for example the search and store containers will not start until transaction server is running.
 - Using some of the values defined in the helm chart it may also create some K8S objects
 
-As this container runs as an init container debugging failures on it might not be obvious to some.
+As this container runs as an init container debugging failures on it might not be always obvious to some.
 
 # How to debug init containers
 
