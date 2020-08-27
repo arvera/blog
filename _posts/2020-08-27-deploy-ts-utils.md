@@ -13,7 +13,7 @@ One of the first activities you will be faced with when deploying HCL Commerce i
 # Deploying the ts-utils in Kubernetes
 To deploy the ts-util container in a K8S environment is very simple:
 
-1. Download [ts-util.yaml](../assets/2020/hcl_commerce/ts-util.yaml)
+1. Download [ts-util.yaml](/../assets/2020/hcl_commerce/ts-util.yaml)
 1. Edit the file, specifcally the ***image*** variable, and use your docker image repository path
 1. `kubectl apply -f ts-utils.yaml`
 1. wait until the container is running
