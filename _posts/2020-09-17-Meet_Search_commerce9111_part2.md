@@ -36,9 +36,11 @@ Let's get to the topic on this post, the ingest and the query services are two o
 
 
 # Turning Trace on HCL Commerce Search
-The development team for HCL Commerce Search continues to work hard implementing new features, one of the feature that is having a lot of attention is serviceability and I know they will be driving important changes when it comes to logging. For now you can turn on logging and tracing in two different ways the documented way in the HCL Commerce Help Center:
-[Logging and troubleshooting the Ingest and Query services](https://help.hcltechsw.com/commerce/9.1.0/search/refs/rsdingest_troubleshooting.html?hl=log)
- and also by turning adding an environment flag that enables the tracing for spring boots. You can add that flag in your helm charts or the docker-compose yaml. In K8S using the helm chart you will do the following:
+The development team for HCL Commerce Search continues to work hard implementing new features, one of the feature that is having a lot of attention is serviceability and I know they will be driving important changes when it comes to logging. For now you can turn on logging and tracing in two different ways:
+1. the documented way in the HCL Commerce Help Center: [Logging and troubleshooting the Ingest and Query services](https://help.hcltechsw.com/commerce/9.1.0/search/refs/rsdingest_troubleshooting.html?hl=log)
+2. by turning the spring-boots logging.
+
+Turning on spring-boots looging will require that you deploy a new image. As you need to add an environment flag that enables the tracing for spring boots. You can add that flag in your helm charts or the docker-compose yaml. In K8S using the helm chart you will do the following:
  1. Open the chart.yaml
  2. Find the `ingestApp:` section
  3. Add to the `envParameters:` section: `logging.level.org.springframework: DEBUG`
