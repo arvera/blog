@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Meet HCL Commerce 9.1 Search - Part 1
+title: Meet HCL Commerce Search 9.1 - Part 1
 date: 2020-09-01
 tag: wcs intro search 9110 9.1.1.0 9.1 Elasticsearch NiFi
 ---
