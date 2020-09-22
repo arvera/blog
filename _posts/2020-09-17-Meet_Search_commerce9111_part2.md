@@ -4,7 +4,7 @@ title: Meet Search Commerce 9111 Part 2
 date: 2020-09-17
 tag: ingest query search commerce servisability
 ---
-This is part 2 of a series of article that aim to introduce the new feature in HCL Commerce Search that uses Elasticsearch as an engine. In this post we will focus on two components ingest and query, I will provide a high level description and then show how to turn trace on for those components. But before jumping into the main topic...
+This is part 2 of a series of article that aim to introduce the new feature in HCL Commerce Search that uses Elasticsearch as an engine. [Part 1](/Meet_Search_Commerce9111_part1/) talked about the overall solution. In this post we will focus on two components ingest and query, I will provide a high level description and then show how to turn trace on for those components. But before jumping into the main topic...
 
 Notice that I am not just saying HCL Commerce with Elasticsearch and that is intentional. HCL Commerce search have added benefits on top of Elasticsearch, HCL Commerce does not uses Elasticsearch standalone, there are added components and features on top of Elasticsearch. Thus it is not HCL Commerce + Elasticsearch, it is HCL Commerce + HCL Commerce Search, and HCL Commerce Search, uses Elasticsearch as a data layer. It is important to understand that unlike its old Solr based solution, the adoption of Elasticsearch has been architected to ensure a clean separation and cut of the components, this allows for better component isolation making HCL Commerce Search leap into the new era of Microservices.
 
