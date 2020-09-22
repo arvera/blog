@@ -8,7 +8,7 @@ This is part 2 of a series of article that aim to introduce the new feature in H
 
 Notice that I am not just saying HCL Commerce with Elasticsearch and that is intentional. HCL Commerce search have added benefits on top of Elasticsearch, HCL Commerce does not uses Elasticsearch standalone, there are added components and features on top of Elasticsearch. Thus it is not HCL Commerce + Elasticsearch, it is HCL Commerce + HCL Commerce Search, and HCL Commerce Search, uses Elasticsearch as a data layer. It is important to understand that unlike its old Solr based solution, the adoption of Elasticsearch has been architected to ensure a clean separation and cut of the components, this allows for better component isolation making HCL Commerce Search leap into the new era of Microservices.
 
-![Inges and Query highlighted in the overall architecture](/../2020/hcl_commerce/search_part2.png)
+![Ingest and Query highlighted in the overall architecture](/assets/2020/hcl_commerce/search_part2.png)
 
 Let's get to the topic on this post, the ingest and the query services are two of the added components which enable HCL Commerce Search to work with elasticsearch. You can read the detailed description of this services in the HCL Commerce Help Center at: [Using the V9.1 HCL Commerce Search service](https://help.hcltechsw.com/commerce/9.1.0/search/concepts/csdsearchingest.html) I only intend to describe it here at high level and then jump into how to turn on the trace on:
 
