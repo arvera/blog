@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Adding a New Field to the Index, aka: Mappings
+title: Adding a New Field to the Index
 date: 2021-06-22
 tag: es search customizing
 ---
