@@ -4,7 +4,6 @@ title: How to install/configure kafka/Zookeper in HCL Commerce v9
 date: 2020-03-07
 tag: wcs install kafka zookeper cache
 ---
-# How to install Kafka/Zookeper for Commerce
 
  In this blog post I will describe the process on how to install Kafka/Zookeeper how to set it setup with commerce. We will focus the Kubernetes setup, but it can also be done in docker using a docker-compose file, but that is outside of the scope of this post.  
 
@@ -12,12 +11,14 @@ This is part #1 of another article that talks about the need of Kafka as part of
 
 There are several ways to install Kafka inside a kubernetes cluster. My friend  Andres Voldman the architect of performance, got his team to install Kafka using a separate namespace other than the commerce and default namespace, this is not required is just simply what is provided as a sample. Kubernetes namespaces are a logical way to group kubernetes artifacts, the intend of this post is not to cover the pro/cons of using a single namespaces or multiple.
 
-The official instructions that we follow to install Kafka are the out of the box instructions at: https://github.com/helm/charts/tree/master/incubator/kafka
+The official instructions that we follow to install Kafka are the out of the box instructions at: [https://github.com/helm/charts/tree/master/incubator/kafka](https://github.com/helm/charts/tree/master/incubator/kafka)
 
 ## Install Kafka using Helm
 
-```helm install --name my-kafka --set persistence.enabled=false
-  –namespace kafka  incubator/kafka```
+```
+kubectl create namespace kafka
+helm install my-kafka incubator/kafka --set persistence.enabled=false -n kafka
+```
 
 In this command we are using `persistence.enable=false` which allows us to quickly get up and running, but will not give you the availability to persist the message. For production we recommend to look into the details of setting `persistence.enabled=true`, but that is outside of the scope of this post.
 
@@ -36,6 +37,7 @@ testclient             1/1     Running   0          3
 ```
 
 ### Services:
+
 The helm charts contained a load-balanced and headless services. The services are only made available within the cluster:
 
 ```
@@ -48,13 +50,15 @@ my-kafka-zookeeper-headless   ClusterIP   None             <none
 ```
 
 The service is setup as per the following table:
+
 | Description | Name |  Value |
 | - | - | - |
 | Short format (for pods within namespace) | service.port |  my-kafka:9092 |
 | Long format (for pods from any namespace) | service.namespace.svc.cluster:port | my-kafka-zookeeper.kafka.svc.cluster.local:2181 |
 | Headless service | append pod | my-kafka-0.my-kafka-headless.kafka.svc.cluster | 
 
-# Commerce configuration
+## Commerce configuration
+
 For commerce container to hook up to kafka/zookeeper, all is required is 3 variables. There two main ways to do this:
 - Using Vault
 - Using Environment Variables at the guest OS.
@@ -72,7 +76,7 @@ To add environment variables the best way would be to edit helm charts used for 
 
 The KAFKA_TOPIC_PREFIX, is to be used so that the required topic queue can be uniquely identified with a prefix of your preference, as long as you are using the same topic prefix, all should work.
 
-You can find the information about this parameters at: https://help.hcltechsw.com/commerce/9.0.0/install/refs/rigstart_txn.html?hl=zookeeper_servers
+You can find the information about this parameters at: [https://help.hcltechsw.com/commerce/9.0.0/install/refs/rigstart_txn.html?hl=zookeeper_servers](https://help.hcltechsw.com/commerce/9.0.0/install/refs/rigstart_txn.html?hl=zookeeper_servers)
 
 Using the helm charts you will want to update the values.yaml for both ts-app and crs:
 ```
