@@ -4,7 +4,7 @@ title: Meet HCL Commerce Search 9.1 - Part 1
 date: 2020-09-01
 tag: wcs intro search 9110 9.1.1.0 9.1 Elasticsearch NiFi
 ---
-In this post I introduce the new HCL Commerce Search 9.1 solution. In ***part 1***(this post) I will cover the new components of search, such as Apache NiFi and Elasticsearch and in [part 2](/Meet_Search_Commerce9111_part2/) I will cover how to enable Trace.
+In this post I introduce the new HCL Commerce Search 9.1 solution. In ***part 1***(this post) I will cover the new components of search, such as Apache NiFi and Elasticsearch and in [part 2](http://www.gunfus.com/Meet_Search_commerce9111_part2/) I will cover how to enable Trace.
 
 The HCL Commerce 9.1 release involved a huge effort from many people in the product team and as they continue to come up with updated releases that effort is on-going. The changes that went into the platform feel like a renewed product, a fresh start in many aspects, a much needed change. Many clients struggled with preprocessing/indexing and search relevancy issues with Solr and the new search solution provides some exciting improvemments in those areas.  
 
