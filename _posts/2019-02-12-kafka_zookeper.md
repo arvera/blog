@@ -9,7 +9,7 @@ The purpose of this post is to show how IBM Commerce v9 works with kafka and zoo
 
 ## Where our adventure begins
 
-We are using docker-compose files to deploy our images. 
+We are using docker-compose files to deploy our images.
 `docker ps`
 
 ```
@@ -39,11 +39,11 @@ NETWORK ID          NAME                DRIVER              SCOPE
 
 ### Server URLs to create caching entries
 With all the configuration identified, we now need:
-1. To identify a URL `https://myhostname/myurl` 
-2. Ensure that the path for this URL is defined in the (cachespecs.xml)[https://www.ibm.com/support/knowledgecenter/en/SSAW57_9.0.0/com.ibm.websphere.nd.multiplatform.doc/ae/rdyn_cachespec.html] 
-3. Use the (cachemonitor application)[https://www.ibm.com/support/knowledgecenter/en/SSZLC2_7.0.0/com.ibm.commerce.admin.doc/tutorial/tdcperf1b.htm] to ensure entries are being cached (hint: here is the URL for the cahce monitor application after installed https://1.11.111.2:5443/cachemonitor)
+1. To identify a URL `https://myhostname/myurl`
+2. Ensure that the path for this URL is defined in the [cachespecs.xml](https://www.ibm.com/support/knowledgecenter/en/SSAW57_9.0.0/com.ibm.websphere.nd.multiplatform.doc/ae/rdyn_cachespec.html)
+3. Use the [cachemonitor application](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_7.0.0/com.ibm.commerce.admin.doc/tutorial/tdcperf1b.htm) to ensure entries are being cached (hint: here is the URL for the cahce monitor application after installed https://1.11.111.2:5443/cachemonitor
 
-### Ensure the configuration matches 
+### Ensure the configuration matches
 In order to use kafka inside the container you will need to always unset the JMX_PORT. You will see this `unset JMX_PORT;` always ahead of the command to run as in step 3 below.
 
 1. login to the server and run: `docker exec -it wcs_kafka_1 bash`
@@ -56,12 +56,12 @@ In order to use kafka inside the container you will need to always unset the JMX
    __consumer_offsets
    ```
 
-***WCdemo*** is the topic queue setup in the txn image during the build process. For more information on configuring kafka refer to this (other post)[2019-02-12_configure_kafka.md]
+***WCdemo*** is the topic queue setup in the txn image during the build process. For more information on configuring kafka refer to this [other post](configure_kafka/)
 
 
 ## Step 1 - Enable caching tracing
 1. Enable extended tracing with the following string: `com.ibm.commerce.dynacache.*=all`
- 
+
 
 ## See all the msgs
 `unset JMX_PORT;kafka-console-consumer.sh --zookeeper zookeeper --topic WCdemoCacheInvalidation --from-beginning`
@@ -76,6 +76,3 @@ cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+NAME:%:DATABASE_
 cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF+STOREENT_ID:%:0
 cache:services/cache/WCStoreDistributedMapCache===WCT+STORECONF
 ```
-
-
-
