@@ -26,9 +26,11 @@ elastic           Active   209d
    * Know what version of Elasticsearch you are using to find out what version of Kibana you need. Use this matrix to help you find the kibana version that you will need for a particular Elasticsearch (click on ***Product compatibility***): [https://www.elastic.co/support/matrix](https://www.elastic.co/support/matrix)
 
 # 1. Add the bitnami repo
+
    `helm repo add bitnami https://charts.bitnami.com/bitnami`
 
 # 2. Install kibana
+
    1. Find out the service of your elasticsearch: `kubectl get svc -n elastic`
 
 	 ```
@@ -38,8 +40,11 @@ elastic           Active   209d
 	 hcl-commerce-elasticsearch-headless   ClusterIP   None           <none>        9200/TCP,9300/TCP   209d
    ```
 
-	 2. In our case we needed kibana 7.12, so we use the following command (you will need to modify the *host*, *port* and *image.tag*):
-`helm install my-kibana bitnami/kibana -n elastic --set "elasticsearch.hosts[0]=hcl-commerce-elasticsearch,elasticsearch.port=9200" --set image.tag=7.12.0`
+	 2. In our case we needed kibana 7.12, so we use the following command (you will need to modify the *host*, *port* and *image.tag
+
+```
+helm install my-kibana bitnami/kibana -n elastic --set "elasticsearch.hosts[0]=hcl-commerce-elasticsearch,elasticsearch.port=9200" --set image.tag=7.12.0
+```
 
 # 3. Testing kibana
 
