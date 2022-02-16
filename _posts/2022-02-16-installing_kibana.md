@@ -33,12 +33,13 @@ elastic           Active   209d
 
    1. Find out the service of your elasticsearch: `kubectl get svc -n elastic`
 
-	 ```
+```
 	 angelvera@Angels-MBP ~ % kubectl get svc -n elastic
 	 NAME                                  TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)             AGE
 	 hcl-commerce-elasticsearch            ClusterIP   23.345.123.230   <none>        9200/TCP,9300/TCP   209d
 	 hcl-commerce-elasticsearch-headless   ClusterIP   None           <none>        9200/TCP,9300/TCP   209d
-   ```
+
+```
 
 	 2. In our case we needed kibana 7.12, so we use the following command (you will need to modify the *host*, *port* and *image.tag
 
