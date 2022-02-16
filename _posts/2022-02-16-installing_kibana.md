@@ -31,7 +31,7 @@ elastic           Active   209d
 
 # 2. Install kibana
 
-   1. Find out the service of your elasticsearch: `kubectl get svc -n elastic`
+1. Find out the service of your elasticsearch: `kubectl get svc -n elastic`
 
 ```
 	 angelvera@Angels-MBP ~ % kubectl get svc -n elastic
@@ -41,7 +41,7 @@ elastic           Active   209d
 
 ```
 
-	 2. In our case we needed kibana 7.12, so we use the following command (you will need to modify the *host*, *port* and *image.tag
+2. In our case we needed kibana 7.12, so we use the following command (you will need to modify the *host*, *port* and *image.tag
 
 ```
 helm install my-kibana bitnami/kibana -n elastic --set "elasticsearch.hosts[0]=hcl-commerce-elasticsearch,elasticsearch.port=9200" --set image.tag=7.12.0
