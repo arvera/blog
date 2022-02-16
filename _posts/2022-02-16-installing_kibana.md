@@ -60,10 +60,10 @@ If you see a message like ***is incompatible with the following Elasticsearch no
 kubectl port-forward svc/my-kibana 5601 -n elastic
     ```
 2. Launch your browser and go to [http://localhost:5601/](http://localhost:5601/)
-3. Click "Explore on my own"
+3. Click ***Explore on my own***
 4. Open the hamburger menu on the top left.
-5. Scroll all the way down to *Stack Monitoring*
+5. Scroll all the way down to ***Stack Monitoring***
 
-From there you should be able to see somethingg like the screenshot below, where you can navigate to your Nodes or Indices and use the different graphs to monitor the state of your Elasticsearch cluster.
+From there you should be able to see something like the screenshot below, where you can navigate to your Nodes or Indices and use the different graphs to monitor the state of your Elasticsearch cluster.
 
 ![Kibana UI](/assets/2022/hcl_commerce/kibana_712_ui.png)
