@@ -27,33 +27,38 @@ elastic           Active   209d
 
 # 1. Add the bitnami repo
 
-   `helm repo add bitnami https://charts.bitnami.com/bitnami`
+````
+helm repo add bitnami https://charts.bitnami.com/bitnami
+````
 
 # 2. Install kibana
 
 1. Find out the service of your elasticsearch: `kubectl get svc -n elastic`
 
-```
-	 angelvera@Angels-MBP ~ % kubectl get svc -n elastic
-	 NAME                                  TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)             AGE
-	 hcl-commerce-elasticsearch            ClusterIP   23.345.123.230   <none>        9200/TCP,9300/TCP   209d
-	 hcl-commerce-elasticsearch-headless   ClusterIP   None           <none>        9200/TCP,9300/TCP   209d
-
-```
+    ```
+angelvera@Angels-MBP ~ % kubectl get svc -n elastic
+NAME                                  TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)             AGE
+hcl-commerce-elasticsearch            ClusterIP   23.345.123.230   <none>        9200/TCP,9300/TCP   209d
+hcl-commerce-elasticsearch-headless   ClusterIP   None           <none>        9200/TCP,9300/TCP   209d
+    ```
 
 2. In our case we needed kibana 7.12, so we use the following command (you will need to modify the *host*, *port* and *image.tag
 
-```
-helm install my-kibana bitnami/kibana -n elastic --set "elasticsearch.hosts[0]=hcl-commerce-elasticsearch,elasticsearch.port=9200" --set image.tag=7.12.0
-```
+    ```
+    helm install my-kibana bitnami/kibana -n elastic --set "elasticsearch.hosts[0]=hcl-commerce-elasticsearch,elasticsearch.port=9200" --set image.tag=7.12.0
+    ```
 
 # 3. Testing kibana
 
 To ensure kibana comes up correctly by monitoring the log (this is your POD name: *my-kibana-7c9959548b-lmf27*): `kubectl logs -n elastic my-kibana-7c9959548b-lmf27 -f`
 
-If you see a message like `is incompatible with the following Elasticsearch nodes in your cluster` that is an error about the version of Kibana not able to work with the Elasticsearch version installed. Refer to the Step 0 and find out what version you need to install using the image.tag attribute.
+If you see a message like ***is incompatible with the following Elasticsearch nodes in your cluster*** that is an error about the version of Kibana not able to work with the Elasticsearch version installed. Refer to the Step 0 and find out what version you need to install using the image.tag attribute.
 
-1. To see the Kibana UI, you will use port-forward: `kubectl port-forward svc/my-kibana 5601 -n elastic`
+1. To see the Kibana UI, you will use port-forward:
+
+    ```
+kubectl port-forward svc/my-kibana 5601 -n elastic
+    ```
 2. Launch your browser and go to [http://localhost:5601/](http://localhost:5601/)
 3. Click "Explore on my own"
 4. Open the hamburger menu on the top left.
