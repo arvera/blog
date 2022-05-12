@@ -16,4 +16,6 @@ When talking about WEB APPS there are 3 main different apps types that often I h
 
 I am still learning about this new concept of Transitional Web Apps, but here is a video that a friend recently posted and I want to repost and take a note.
 
+You can try  writing your transitional app at [https://svelte.dev/](https://svelte.dev/) you will notice that it has the look and feel of writing a SPA, and there is plugins for vscode.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/860d8usGC0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
