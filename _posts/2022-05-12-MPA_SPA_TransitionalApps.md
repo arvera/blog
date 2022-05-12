@@ -14,6 +14,6 @@ When talking about WEB APPS there are 3 main different apps types that often I h
 
 * `null` = **Transitional Web Apps**: Refers to an hybrid, an in between approach.
 
-I am still learning about this new concept of Transitional Web Apps, but here is a video that I friend recently posted.
+I am still learning about this new concept of Transitional Web Apps, but here is a video that a friend recently posted and I want to repost and take a note.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/860d8usGC0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
