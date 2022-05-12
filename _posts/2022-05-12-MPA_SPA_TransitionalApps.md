@@ -4,7 +4,7 @@ title: Multi Page Apps, Single Page Apps or TransitionalApps
 date: 2022-05-12
 tag: MPA SPA TAP
 ---
-Toady is one of those days, that I am posting as a purpose of using this blog as my notepad.
+Today is one of those days, that I am posting as a purpose of using this blog as my notepad.
 
 When talking about WEB APPS there are 3 main different apps types that often I have to refer to.
 
