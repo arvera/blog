@@ -26,7 +26,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider: "giscus"      : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "giscus"      # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   giscus:
     repo_id              : "MDEwOlJlcG9zaXRvcnkxNTU4Njg0MzY=" # Shown during giscus setup at https://giscus.app
     category_name        : "Comments" # Full text name of the category
