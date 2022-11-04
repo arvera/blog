@@ -11,6 +11,7 @@ In this post I will document the link and steps that I use to create a micro clu
 - A Micro cluster, is a very small cluster for testing purposes
 
 # Plan your cluster
+ß
 The options are:
 - Public endpoint access disabled
 - Public endpoint access enabled, master authorized networks enabled
@@ -20,9 +21,11 @@ What type of cluster do you want you is the starting point, for that you can use
 [https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept), they also have a nice table for you to consider the right option for your cluster.
 
 # Create the micro cluster
+
 I decided to create a Private Cluster, that is one that Public endpoint access enabled, and master authorized networks enabled. This topic is well describe in the google docs here: [https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#all_access](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#all_access)
 
 # Getting the charts for alpine
+
 To deploy alpine in the cluster, I configured my Laptop gcloud tools.
 
 `gcloud container clusters get-credentials av-test --zone=us-east1-c`
@@ -42,9 +45,13 @@ git pull origin master
 ```
 
 # Installing Alpine on the clusters
+
 Move into the `cmd/helm/testdata/testcharts/` directory. At this time of this write up using: `version.BuildInfo{Version:"v3.1.2", GitCommit:"d878d4d45863e42fd5cff6743294a11d28a9abce", GitTreeState:"clean", GoVersion:"go1.13.8"}` I run into a problem that caused me to modify the charts and remove/comment line 15, on template/alpine-pod.yaml.
+
 ```
+{% raw %}
 #app.kubernetes.io/version: {{ .Chart.AppVersion }}
+{% endraw %}
 ```
 
 After removing that line you can do:
@@ -52,6 +59,7 @@ After removing that line you can do:
 
 
 # Check that alpine is working
+
 Using the following cmd, you should see one pod called *my-alpine*
 * `kubectl get pods`
 
@@ -60,4 +68,5 @@ Using the following cmd, you should be able to get into the pod
 
 
 # Connecting to a VM outside of the cluster, but still in GCP
+
 I have the requirement to connect the pods running in the cluster to a Compute Engine (VM) running with an internal IP and not exposed to the internet. I have not completed this work at this time but will create a post when I do.
