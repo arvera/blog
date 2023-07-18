@@ -9,7 +9,7 @@ tag: maven tutorial newbie
 
 Maven is a build, packaging utility that is wiedly adopted. I have known about it for a long time but never really had a need or wanted to learn. That changed TODAY!. I come from a Java developer and ANT background, with a lot of expertize in Eclipse.
 
-There lots of tutorial out there in the web that explain how to build a Hello world sample, I started with this one from Spring.io (https://spring.io/guides/gs/maven/)[https://spring.io/guides/gs/maven/] I liked it because it was very simple to folllow. As I completed the tutorial and I used 'mvn compile' things didn't work and that is were my adventure for this blog post starts... where did I go wrong? is the tutorial wrong? did I miss a step? and also where is this compile target, in ant we have Target tasks, so where is the compile target?
+There lots of tutorial out there in the web that explain how to build a Hello world sample, I started with this one from Spring.io [https://spring.io/guides/gs/maven/](https://spring.io/guides/gs/maven/) I liked it because it was very simple to folllow. As I completed the tutorial and I used 'mvn compile' things didn't work and that is were my adventure for this blog post starts... where did I go wrong? is the tutorial wrong? did I miss a step? and also where is this compile target, in ant we have Target tasks, so where is the compile target?
 
 # Changing the maven default src path
 
@@ -118,7 +118,7 @@ Our complete pom.xml looks like:
 </project>
 ```
 
-## The maven phases (The build lifecycle)
+# The maven phases (The build lifecycle)
 
 In the previous section we glanced over the build section to look into the build > sourceDirectory section to explain the inheritance and show how if a property is not there, it uses the from defined by its parent or the default. This will become more applicable as you move forward and have to define yourself with child pom.xml. Let me now introduce you to the basic lifecycle.
 
