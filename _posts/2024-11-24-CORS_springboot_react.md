@@ -5,11 +5,15 @@ date: 2024-11-24
 tag: springboot react cors
 ---
 
+# The Background
+
 I have been doing a lot of learning in react. I have a small spring boot application for an application that has a server side frontend, and I wanted to add a react storefront.
 
 I got everything running in my computer, where Spring boot is running inside of Eclipse, and React is runing with the default React native server, the one that comes with your tutorial application when you do `npx create-react-app afp-react-app`.
 
 By default spring boot apps run in port 8080 and the react server runs in 3000 and this is effectively a Cross-Origin Resource Sharing scenario, CORS for short. If you come from my world where Sever side application is all you know or if you are starting from Scratch as a Full Stack Developer, CORS problems are common and something that needs to be understood and not be thought as a problem for later.
+
+# The story
 
 As I was developing my React application I encounter this CORS problem when trying to get my Authentication and Bearer scenario. In my case, using postman against the backend spring boot application worked without proble. When calling POST /api/auth/signin it would return me the bearer token and then using that token and calling api/admin/users/get it would break
 
@@ -67,6 +71,8 @@ export const signinThunk = createAsyncThunk('user/signin',
     }
 ```
 
+# The problem
+
 As you can see I have added already some extra options to my fetch call that supposedly were going to help me when working https calls (I originally had my spring boot application running with HTTPS and a self signed certificate) while debugging I removed the HTTPS part to simply the scenario. This seemed to work okay for the api/auth/signin part, and with my original configuration but when I went to do the second part to the /api/admin/users/get I would get a CORS error in the javascript console of the browser, like:
 
 ```
@@ -91,6 +97,8 @@ Showing me to change the Spring Boot code in a way that would modify the registr
 
     }
 ```
+
+# The Fix that worked
 
 As you can see I tried a few different ways and I wasn't able to get it to work, I then continue reading and trying things for hours/days until I decided to try a different approach. This different approach creates a method with the @Bean annotation, and using the CorsConfiguration class it sets the conditions. We call this method from the already existing securityFilterChain method, I like this approach as it keeps all my configuration in one class. Below is the sample.
 
