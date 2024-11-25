@@ -23,8 +23,8 @@ Cookie: JSESSIONID=5952F39157BBB77A4B813F73F37015B4
 Content-Length: 60
 
 {
-    "username": "avera",
-    "password": "1-coke-devil"
+    "username": "admin",
+    "password": "admin"
 }
 
 ```
